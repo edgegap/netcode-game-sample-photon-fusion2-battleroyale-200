@@ -1,5 +1,7 @@
 # BR200 dedicated servers on Edgegap
 
+![Add dedicated game servers to Photon Fusion 2's BR200 battle royale sample using Edgegap's kit for Unity.](docs/images/card.jpg)
+
 Run Photon's [BR200 Battle Royale (Photon Fusion)](https://assetstore.unity.com/packages/templates/packs/br200-battle-royale-multiplayer-photon-fusion-226753) sample as a dedicated server on [Edgegap](https://edgegap.com), one deployment per match, close to the players.
 
 Copy this kit into your BR200 project. It doesn't change any BR200 or Fusion code, and it doesn't include any. You still get BR200 from the Unity Asset Store under your own licence.
