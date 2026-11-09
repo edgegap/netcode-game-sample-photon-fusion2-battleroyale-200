@@ -27,7 +27,7 @@ Copy this kit into your BR200 project. It doesn't change any BR200 or Fusion cod
   - Unity 6000.3 and later: `com.unity.toolchain.win-x86_64-linux` and `com.unity.sdk.linux-x86_64`
   - earlier versions: `com.unity.toolchain.win-x86_64-linux-x86_64`
 - A Photon Fusion App ID from the [Photon dashboard](https://dashboard.photonengine.com).
-- An Edgegap account and the [Edgegap Unity plugin](https://github.com/edgegap/edgegap-unity-plugin) (*Edgegap Servers Quickstart*, written against 3.2.1). You only need it if you build from the editor.
+- An Edgegap account and the [Edgegap Unity plugin](https://github.com/edgegap/buildtool-unity-plugin) (*Edgegap Servers Quickstart*, 3.2.2 or newer: the default Dockerfile of 3.2.1 and older prints the deployment's variables, including its self-stop token, to the logs). You only need it if you build from the editor.
 - Docker Desktop.
 
 ## 1. Add the kit to the project
