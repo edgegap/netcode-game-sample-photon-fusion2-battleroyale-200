@@ -176,7 +176,6 @@ BR200 2.1.0, Fusion 2.1.1 build 2177, Unity 6000.3.11f1, Windows 11, Docker Desk
 - **Build:** Check Project and Build Linux Server produced an IL2CPP Linux server in 56 minutes, almost all of it IL2CPP (a Mono build takes 2 minutes but breaks RPCs; see [What you need](#what-you-need)).
 - **Local container:** two clients joined with no exceptions. They show CT **Relayed** there, because a client on the same machine can't reach Docker Desktop's NAT address. That only happens locally.
 - **Edgegap:** deployments in Toronto. The kit's region choice picked `cae`. Two clients joined each one with CT Direct (11 to 126 ms in Toronto; 14 to 15 ms in Newark, where the kit picked `us`). In a two-player Battle Royale with no exceptions on server or clients, one client left, the other got the Game Over screen, and the deployment stopped on its own 2.5 minutes after it started.
-- **Not tested yet:** 200 players, CPU and memory sizing for a full match, maps other than GenArea7, the Menu UI join path, and macOS or Linux build hosts.
 
 ## Licence
 
