@@ -24,7 +24,7 @@ Copy this kit into your BR200 project. It doesn't change any BR200 or Fusion cod
 
 - The BR200 project from the Asset Store, opened in a Unity version it supports, with the **Linux Dedicated Server** build module.
 - The server must use **IL2CPP**, BR200's default. On a Mono server, BR200's RPCs fail with `MethodAccessException` and players never get a character. To build Linux IL2CPP on Windows, add Unity's Linux toolchain in **Window > Package Manager > + > Add package by name**:
-  - Unity 6000.3 and later: `com.unity.toolchain.win-x86_64-linux` and `com.unity.sdk.linux-x86_64`
+  - Unity 6000.3: `com.unity.toolchain.win-x86_64-linux@1.1.0` and `com.unity.sdk.linux-x86_64@1.1.0` (type the version after the name). Version 1.1.1 fails the build with `No Linux sysroot found for x64`, and Unity may bump an existing 1.1.0 entry in `Packages/manifest.json` to 1.1.1, so check that file if that error appears
   - earlier versions: `com.unity.toolchain.win-x86_64-linux-x86_64`
 - A Photon Fusion App ID from the [Photon dashboard](https://dashboard.photonengine.com).
 - An Edgegap account and the [Edgegap Unity plugin](https://github.com/edgegap/buildtool-unity-plugin) (*Edgegap Servers Quickstart*, 3.2.2 or newer: the default Dockerfile of 3.2.1 and older prints the deployment's variables, including its self-stop token, to the logs). You only need it if you build from the editor.
@@ -147,7 +147,7 @@ When BR200 exits, the script calls the deployment's own self-stop URL (`ARBITRIU
 |---|---|
 | `Unsafe code may only appear if compiling with /unsafe` right after importing BR200 | First-import ordering. Reopen the project. If it persists, enable *Allow 'unsafe' Code*; Build Linux Server turns it on. |
 | `MethodAccessException ... CheckInvokeRpc` in the server log | The server was built with Mono. Use IL2CPP. |
-| `No Toolchain found for host platform` or `No Linux sysroot found` | The Linux toolchain packages are missing. See [What you need](#what-you-need). |
+| `No Toolchain found for host platform` or `No Linux sysroot found` | The Linux toolchain packages are missing, or `Packages/manifest.json` lists 1.1.1 instead of 1.1.0. See [What you need](#what-you-need). |
 | Client gets `GameNotFound` | The App Version or Photon region differs between client and server. Compare with the server's `photon_region=` log line. |
 | Client gets `InvalidAuthentication` | Wrong or missing Fusion App ID in the build. |
 | Tab overlay shows CT **Relayed** | The server binds `127.0.0.1`. See [Direct connection](#direct-connection). |
